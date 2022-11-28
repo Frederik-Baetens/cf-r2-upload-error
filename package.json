@@ -1,0 +1,24 @@
+{
+  "name": "r2-error",
+  "version": "1.0.0",
+  "description": "",
+  "main": "reproduce_failure.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acouette/cf-r2-upload-error.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acouette/cf-r2-upload-error/issues"
+  },
+  "homepage": "https://github.com/acouette/cf-r2-upload-error#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1262.0",
+    "axios": "^1.2.0"
+  }
+}
