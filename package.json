@@ -19,6 +19,7 @@
   "homepage": "https://github.com/acouette/cf-r2-upload-error#readme",
   "dependencies": {
     "aws-sdk": "^2.1262.0",
-    "axios": "^1.2.0"
+    "axios": "^1.2.0",
+    "dotenv": "^16.0.3"
   }
 }

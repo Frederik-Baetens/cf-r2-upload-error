@@ -2,21 +2,28 @@ const {S3} = require('aws-sdk');
 const {stat, open} = require('fs').promises;
 const axios = require('axios');
 const crypto = require('crypto');
+require('dotenv').config()
+console.log(process.env)
 
-const options = {
-    // accessKeyId: 'xxx',
-    // secretAccessKey: 'xxx',
-    endpoint: `https://367791ca7abea81096902b345fee7b1f.r2.cloudflarestorage.com`,
-    signatureVersion: 'v4',
-    region: 'auto',
-};
-
+const accessKey = process.env.CF_ACCESS_KEY
+const secretAccessKey = process.env.CF_SECRET_ACCESS_KEY
 
 const key = process.env.CF_OBJECT_KEY;
 const bucket = process.env.CF_BUCKET_NAME;
+console.log(key)
 const partSize = 5242880;
 const objectSize = 24262281;
 const failureRatePercentageOnUploadEvent = 30;
+
+const options = {
+    accessKeyId: accessKey,
+    secretAccessKey: secretAccessKey,
+    endpoint: `https://yzqkzfkyflrt.compat.objectstorage.ca-toronto-1.oraclecloud.com`,
+    signatureVersion: 'v4',
+    s3ForcePathStyle: true,
+    region: 'auto',
+};
+
 
 async function doIt() {
 
